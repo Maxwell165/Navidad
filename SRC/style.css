@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --fuenteSeccion1:"Outfit", serif;
+    --blanco:rgba(245,245,245)
+}
+section{
+    padding: 20px;
+}
+li{list-style: none;}
+p{font-size: 1.2em;
+justify-content: center;}
+a{
+    text-decoration: none; 
+    cursor: pointer;
+    } 
+
+/* SECCION 01 */
+/* ----------------------------------- */
+#seccion1{
+    height: 100vh;
+    width: 100%;
+    background-image: url(./IMAGE/SECCION01/home-static-2.jpg);
+    background-position: center;
+    background-repeat: no repeat;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    font-family: var(--fuenteSeccion1);
+    
+}
+#seccion1 img{
+    width: 40px;
+    margin-top: -80px;
+}
+#seccion1 p{
+    margin-top: 20px;
+    font-size: 2.1em;
+    
+}
+#seccion1 h2{
+    margin-top: 15px;
+}
+#seccion1 h4{
+    margin: 15px;
+    font-size: 1.7em;
+}
+#time{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+h4{
+    display: flex;
+    flex-direction: column;
+    
+}
+#container-img-noel-reno img{
+    display: none;
+}
+
+
+#seccion2{
+    font-family: var(--fuenteSeccion1) ;
+    font-weight: 250;
+}
+#arbolnavidadimg{
+    object-fit: cover;
+    width: 100%;
+}
+
+#seccion2 h2 {
+    margin-top: 15px;         
+    
+}
+#sub-seccion2::after{
+    margin-top: 5px;
+    content: "";
+    width: 100px;
+    height: 2px;
+    background-color: brown;
+    display: block;
+}
+ 
+#seccion2 p{
+    margin-top: 10px;
+    color: rgba(86, 86, 92, 0.993);
+}
+
+#tips-arbol-container{
+    margin-top: 25px;
+}
+.class-tips{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+}
+.class-tips div{
+    margin-left: 20px;
+}
+.class-tips h4{
+    font-size: 1.4em;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.class-tips p{
+    font-weight: 180;
+
+}
+.class-tips img{
+    width: 100px;
+    padding: 10px;
+    transition: transform 0.8s ease;
+}
+.class-tips img:hover{
+    transform: scale(1.2);
+}
+
+#seccion3{
+    background-image: url(./IMAGE/SECCION03/gorros-navidad.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    position: relative;
+    text-align: center;
+}
+#seccion3 h2{
+    color:white;
+    font-family: var(--fuenteSeccion1);
+    z-index: 2;
+}
+#seccion3 p{
+    font-family: var(--fuenteSeccion1);
+    color: var(--blanco);
+    text-align: center;
+    z-index: 2;
+}
+#seccion3 button{
+    padding: 8px 15px;
+    font-family: var(--fuenteSeccion1);
+    font-size: 0.9em;
+    border-radius: 15px;
+    border: none;
+    color: var(--blanco);
+    background-color: rgb(71, 64, 64);
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.2s ease;
+}
+#seccion3 button:hover{
+    color: rgb(71, 64, 64);
+    background-color: white;
+
+}
+#seccion3::before{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(180, 25, 25, 0.589);
+}
