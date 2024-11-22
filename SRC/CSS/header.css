@@ -31,7 +31,7 @@ header{
     font-family: var(--fuenteSeccion1);
     background-color: rgba(240, 248, 255, 0);
     /* background: linear-gradient(to right, #ffd2d2, #d1c9c9, #fde2e2); */
-    padding: 50px;
+    padding: 20px;
     z-index: 20;
     position: fixed;
     /* box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.301);  */

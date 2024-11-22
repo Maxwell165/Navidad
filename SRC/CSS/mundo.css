@@ -10,8 +10,8 @@
     position: relative;
 }
 #container-buttones{
-    width: 150px;
-    height: 600px;
+    width: 95px;
+    height: 410px;
     position: absolute;
     top: 0;
     right: 0;
@@ -19,13 +19,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     padding: 25px;
+
 
 }
 #container-buttones span{
-    width: 70px;
-    height: 70px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     background-color: antiquewhite;
     text-align: center;
@@ -35,16 +36,57 @@
 }
 
 #container-buttones img:first-child{
- width: 60px;
- height: 60px;
+ width: 50px;
+ height: 50px;
 
 }
 #container-buttones img{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
 }
 
+/* PAISES STYLES CARD  */
 
+.card{
+    margin: auto;
+    width: 340px;
+    height: auto;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 8px 7px 2px rgba(65, 64, 64, 0.164);
+    border-radius: 5px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.card h2{
+    font-family: "Lobster", serif;
+    color: rgba(46, 46, 46, 0.863);
+}
+
+.card p{
+    margin-top: 10px;
+    font-family: "Outfit", serif;
+    font-size: 0.8em;
+}
+
+.img-pais{
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 350px;
+    animation: mover 0.7s linear ;
+
+}
+@keyframes mover{
+    0%{
+        top:-100px
+    }
+    100%{
+        top:-10px   
+    }
+}
