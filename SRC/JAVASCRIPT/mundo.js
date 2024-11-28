@@ -12,9 +12,9 @@ class Marcador {
     crearMarcador() {
         const icono = {
             url: this.url,
-            scaledSize: new google.maps.Size(100, 100),
+            scaledSize: new google.maps.Size(50, 50),
             origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(50, 50)
+            anchor: new google.maps.Point(40, 40)
 
         }
 
@@ -38,7 +38,7 @@ class eventos {
         this.resultado = null
         this.marcadorenfocado = false
         this.enfocarMarcador()
-        this.moverMarcador()
+        // this.moverMarcador()
     }
 
     //METODO PARA ENFOCAR EL PIN
@@ -47,8 +47,8 @@ class eventos {
         this.marcadores.forEach((marcador) => {
             google.maps.event.addListener(marcador.marker, "click", () => {
                 this.map.setCenter(marcador.marker.getPosition())
-                this.map.setZoom(4.5)
-            
+                this.map.setZoom(4)
+                
                 this.resultado = modalpaises.find((elemento) =>
                     elemento.nombre.toLowerCase() === marcador.title.toLowerCase());
                     InsertarPaises(this.resultado)
@@ -63,53 +63,52 @@ class eventos {
     }
 
 
-    moverMarcador() {
-        //METODO PARA AVANZAR CON LAS FLECHAS
-        const atras = document.getElementById("atras")
-        const delante = document.getElementById("delante")
-                // EVENTO PARA AVANZAR CON EL BOTON 
-            atras.addEventListener("click", () => {
-                try {
+    // moverMarcador() {
+    //     //METODO PARA AVANZAR CON LAS FLECHAS
+    //     const atras = document.getElementById("atras")
+    //     const delante = document.getElementById("delante")
+    //             // EVENTO PARA AVANZAR CON EL BOTON 
+    //         atras.addEventListener("click", () => {
+    //             try {
 
-                        let newindice = this.indice - 1
-                        console.log(newindice)
+    //                     let newindice = this.indice - 1
+    //                     console.log(newindice)
 
                     
 
 
 
-                }
-                catch {
-                    console.error("Error al atras")
-                }
-            })
-            // EVENTO PARA AVANZAR CON EL BOTON 
-            delante.addEventListener("click", () => {
-                try {
+    //             }
+    //             catch {
+    //                 console.error("Error al atras")
+    //             }
+    //         })
+    //         // EVENTO PARA AVANZAR CON EL BOTON 
+    //         delante.addEventListener("click", () => {
+    //             try {
                     
                     
-                }
-                catch {
-                    console.error("Error al delante")
-                }
+    //             }
+    //             catch {
+    //                 console.error("Error al delante")
+    //             }
 
-            })
+    //         })
 
 
 
 
         
-    }
+    // }
 }
 // METODO PAARA MOSTRAR  MAPA COMPLETO
 const zoomCompleto = (map) => {
     const planeta = document.getElementById("planeta")
     planeta.addEventListener("click", () => {
         map.setCenter({ lat: 15, lng: 15 })
-        map.setZoom(2.5)
+        map.setZoom(1)
         const contenedorPaises = document.getElementById("paises")
         contenedorPaises.innerHTML = ""
-
     })
 
 }
@@ -120,7 +119,7 @@ function initMap() {
     const map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 15, lng: 15 },  // Coordenadas del centro del mapa
         mapId: '4f4beacbe7b0addc',
-        zoom: 2.5,
+        zoom: 1,
         disableDefaultUI: true,  // Desactivar todos los controles predeterminados
         draggable: false,  // Desactivar la capacidad de arrastrar el mapa
         scrollwheel: false,  // Desactivar el zoom con la rueda del ratón
@@ -136,7 +135,7 @@ function initMap() {
         { "nombre": "Guatemala", "latitud": 15.78, "longitud": -90.2, "icono": "/SRC/IMAGE/MUNDO/SVG/pin-celeste.svg" },
         { "nombre": "EEUU", "latitud": 37.09024, "longitud": -95.712891, "icono": "/SRC/IMAGE/MUNDO/SVG/pin-marron.svg" },
         { "nombre": "Brasil", "latitud": -14.235004, "longitud": -51.92528, "icono": "/SRC/IMAGE/MUNDO/SVG/pin.amarillo.svg" },
-        { "nombre": "Canada", "latitud": 45.130366, "longitud": -106.3467, "icono": "/SRC/IMAGE/MUNDO/SVG/pin-naranja.svg" },
+        { "nombre": "Canada", "latitud": 52.130366, "longitud": -106.3467, "icono": "/SRC/IMAGE/MUNDO/SVG/pin-naranja.svg" },
         { "nombre": "Mexico", "latitud": 25.432608, "longitud": -105.13320, "icono": "/SRC/IMAGE/MUNDO/SVG/pin-rosado.svg" },
         { "nombre": "Argentina", "latitud": -38.416097, "longitud": -63.61, "icono": "/SRC/IMAGE/MUNDO/SVG/pin-verde.svg" },
         { "nombre": "Francia", "latitud": 46.569177329934845, "longitud": 1.786342174972705, "icono": "/SRC/IMAGE/MUNDO/SVG/pin.amarillo.svg" },

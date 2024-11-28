@@ -4,9 +4,9 @@ const cantidad = ()=>{
         const copo = document.createElement("span")
         copo.classList.add("nieve")
 
-        let tamaño = Math.floor((Math.random()*4)) + 2;
+        let tamaño = Math.floor((Math.random()*7)) + 2;
         let opacidad =Math.random() * (0.9 - 0.6) + 0.6;
-        let velocidad = Math.floor(Math.random()*15) + 10;
+        let velocidad = Math.floor(Math.random()*20) + 15;
         let ejeX = Math.floor(Math.random() * 101);
         let ejey = Math.floor(Math.random()* (60 - 30)+ 30);
 
@@ -18,12 +18,8 @@ const cantidad = ()=>{
         copo.style.right = `${ejeX}%`
         copo.style.top = `-${ejey}%`
 
-        if (copo < 40){
-               setInterval(mostrarnieve.appendChild(copo),2000) 
-        }
-
         mostrarnieve.appendChild(copo)
         
     
 }
-setInterval(()=>cantidad(),850)
+setInterval(()=>cantidad(),200)

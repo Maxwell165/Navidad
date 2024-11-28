@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 #map{
     width: 100%;
     height: 100vh;
@@ -11,35 +10,58 @@
 }
 #container-buttones{
     width: 95px;
-    height: 410px;
+    height: 300px;
     position: absolute;
     top: 0;
     right: 0;
+    align-items: center;
+    padding: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 25px;
-
 
 }
+
 #container-buttones span{
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    background-color: antiquewhite;
-    text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    
 }
 
-#container-buttones img:first-child{
- width: 50px;
- height: 50px;
-
+#container-buttones span:active{
+    transform: translateX(5px)translateY(5px);
+    
 }
+
+#planeta{
+    background-color: rgb(189, 0, 142);
+    box-shadow:  5px 5px 1px rgb(134, 15, 104), 10px 10px 1px rgba(24, 12, 21, 0.192);
+    transition:  box-shadow 0.15s linear;
+    top: 100px;
+    left: 18px;
+}
+#planeta:active{
+    box-shadow:
+    0px 0px 1px rgb(134, 15, 104)
+}
+#atras{
+    position: absolute;
+    top: 200px;
+    background-color: aliceblue;
+    box-shadow:  5px 5px 1px rgb(126, 125, 125), 10px 10px 1px rgba(24, 12, 21, 0.192);
+    transition:  box-shadow 0.15s linear;
+}
+#atras:active{
+    box-shadow:
+    0px 0px 1px rgb(126, 125, 125)
+}
+
+
 #container-buttones img{
     width: 60px;
     height: 60px;
@@ -77,9 +99,9 @@
 .img-pais{
     position: absolute;
     top: -40px;
-    left: -40px;
-    width: 350px;
-    animation: mover 0.7s linear ;
+    left: -50px;
+    width: 300px;
+    animation: mover 1s linear ;
 
 }
 @keyframes mover{
