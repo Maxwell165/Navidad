@@ -1,0 +1,206 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Railey";
+    src: url("/font/Railey-PersonalUse.ttf") format("truetype");
+    font-style: normal;
+}
+
+#seccion1{
+    height: auto;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(231, 220, 193, 0.952) , rgb(238, 216, 176));
+    text-align: center;
+    padding-top: 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+#seccion1 h1{
+    font-family:"Railey",sans-serif;
+    color: rgb(55, 68, 75);
+    font-weight: 500;
+    font-size: max(6em,10vw);
+}
+#container-adviento{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(200px,1fr)
+    );
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 25px;
+    margin-top: 20px;
+    
+
+}
+.cuadro{
+    font-family:"Railey",sans-serif;
+    border-radius: 20px;
+    padding: 15px;
+    color: rgb(63, 97, 110);
+    min-width: 200px;
+    height: 220px;
+    cursor: pointer;
+    font-size: 3.5em;
+    transition: transform 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    /*---------------------------  */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* --------------------------- */
+}
+#container-adviento .cuadro h1{
+    font-size: 1em;
+    text-align: start;
+    opacity: 0.9;
+}
+.cuadro:hover{
+    transform: scale(1.1);
+    z-index: 5;
+}
+
+#div1{
+    /* background-color: rgb(228, 209, 126); */
+    background-image: url(/SRC/IMAGE/ADVIENTO/prueba.gif);
+    overflow: hidden;
+}
+
+#div1 img{
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%, -50%); /* Centrado perfecto */
+    min-width: 70%;
+}
+
+#div2{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-2.gif);
+}
+#div2 img{
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    transform: translate(-50%, -50%); /* Centrado perfecto */
+    min-width: 70%;
+}
+
+#div3{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-3.gif);
+}
+#div3 h1{
+    color: rgb(255, 255, 255);
+}
+#div4{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-4.gif);
+}
+#div4 h1{
+    color: rgb(255, 255, 255);
+}
+#div5{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-5.gif);
+}
+#div5 h1{
+    color: rgb(255, 255, 255);
+}
+#div6{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-6.gif);
+}
+
+#div7{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-7.gif);
+}
+
+#div8{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-8.gif);
+}
+#div9{ 
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-9.gif);
+}
+#div10{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-10.gif);
+}
+#div10 h1{
+    color: white;
+}
+#div11{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-11.gif);
+}
+#div11 h1{
+    color: rgb(221, 221, 221);
+}
+#div12{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-12.gif);
+}
+#div12 h1{
+    color: rgb(255, 255, 255);
+}
+#div13{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-13.gif);
+}
+#div13 h1{
+    color: rgb(255, 255, 255);
+}
+#div14{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-14.gif);
+}
+#div14 h1{
+    color: white;
+}
+#div15{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-15.gif);
+}
+#div15 h1{
+    color: white;
+}
+#div16{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-16.gif);
+}
+#div17{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-17.gif);
+}
+#div18{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-18.gif);
+}
+#div18 h1{
+    color: white;
+}
+#div19{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-19.gif);
+}
+#div19 h1{
+    color: white;
+}
+#div20{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-20.gif);
+}
+#div21{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-21.gif);
+}
+#div21 h1{
+    color: white;
+}
+#div22{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-22.gif);
+}
+#div22 h1{
+    color: white;
+}
+#div23{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-23.gif);
+}
+#div23 h1{
+    color: white;
+}
+#div24{
+    background-image: url(/SRC/IMAGE/ADVIENTO/gif-25.gif);
+}

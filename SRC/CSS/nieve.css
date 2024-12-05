@@ -8,7 +8,7 @@
     z-index: 9;
     border-radius: 50%;
     background-color: rgba(252, 252, 252, 0.952);
-    animation: caidaX 4s linear infinite, mover 4s ease infinite
+    animation: caidaX  linear infinite
 }
 
 @keyframes caidaX{
@@ -16,7 +16,7 @@
         top:-30%
     }
     100%{
-        top:100%
+        top:95%
     }
 }
 

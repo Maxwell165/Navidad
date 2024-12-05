@@ -140,8 +140,15 @@ input,button{
     font-size: 1.2em;
     margin-top: 10px;
     cursor: pointer;
+    transition: transform 0.1s linear , background-color 0.2s linear;
 }
 
+#carta-text button:hover{
+    background-color: rgb(23, 100, 27);
+}
+#carta-text button:active{
+    transform: scale(0.95) ;
+}
 
 #seccion02-carta{
     background:linear-gradient(to bottom, #d11717, #e71313d8);
@@ -173,14 +180,14 @@ input,button{
     align-items: center;
     align-content: center;
     position: absolute;
-    top: 15%;
+    top: 13%;
     width: 100%;
     height: auto;
     flex-direction: column;
 
 }
 #container-mensajes h2{
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     font-family: "Railey";
     color: white;
     font-size: 5em;
@@ -189,10 +196,8 @@ input,button{
 #container-mensaje-flechas{
     display: flex;
     align-items: center;
-    justify-content: center;
-    align-content: center;
     width: 100%;
-    height: auto;
+    height: 200px;
     padding: 5px;
     
 }
@@ -212,20 +217,21 @@ input,button{
 #container-mensaje{
     display: flex;
     flex-direction: column;
-    width: 100%;
     height: auto;
     text-align: center;
+    width: 85%;
 
 }
 
-#name-mensaje{
+#nombre-mensaje{
     margin-top: 10px;
     font-family: "Aegean";
     color: rgba(255, 192, 96, 0.945);
 }
 #mostrar-mensaje{
     font-family: "Aegean";
+    overflow: hidden;
     color: white;
-    font-size: 1.1em;
+    font-size: 1.3em;
 
 }

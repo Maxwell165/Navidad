@@ -46,8 +46,9 @@
                     </div>
 
                     <div id="carta-text">
-                        <div  id="content"><textarea id="text-carta" cols="30" rows="10"></textarea></div>
-                        <button>Enviar</button>
+                        <div id="content"><textarea id="text-carta" cols="30" rows="10"></textarea></div>
+                        <p id="caracteres">0/180</p>
+                        <button id="enviar-carta">Enviar</button>
                     </div>
 
                 </div>
@@ -64,12 +65,12 @@
             <div id="container-mensajes">
                 <h2>Mensajes</h2>
                 <div id="container-mensaje-flechas">
-                    <img src="/SRC/IMAGE/CARTANOEL/flecha-izquierda.png" alt="">
+                    <img id="flecha-izquierda" src="/SRC/IMAGE/CARTANOEL/flecha-izquierda.png" alt="">
                     <div id="container-mensaje">
-                        <p id="mostrar-mensaje"> Un avion de verdad de oro</p>
-                        <p id="name-mensaje"> Max</p>
+                        <p id="mostrar-mensaje"></p>
+                        <p id="nombre-mensaje"> </p>
                     </div>
-                    <img src="/SRC/IMAGE/CARTANOEL/flecha-derecha.png" alt="">
+                    <img id="flecha-derecha" src="/SRC/IMAGE/CARTANOEL/flecha-derecha.png" alt="">
                 </div>
 
             </div>
@@ -81,5 +82,6 @@
 </body>
 <script src="/SRC/JAVASCRIPT/header.js"></script>
 <script src="/SRC/JAVASCRIPT/nieve.js"></script>
+<script type="module" src="/SRC/JAVASCRIPT/Carta.js"></script>
 
 </html>
