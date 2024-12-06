@@ -223,7 +223,7 @@ h4 {
 
 /* SECCION 03 */
 #seccion3 {
-    background-image: url(./IMAGE/SECCION03/gorros-navidad.jpg);
+    background-image: url(/SRC/IMAGE/SECCION03/gorros-navidad.jpg);
     background-position: center;
     background-size: cover;
     height: 50vh;
