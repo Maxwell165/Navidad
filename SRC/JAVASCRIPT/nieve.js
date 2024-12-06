@@ -22,4 +22,4 @@ const cantidad = ()=>{
         
     
 }
-setInterval(()=>cantidad(),100)
+setInterval(()=>cantidad(),1000)

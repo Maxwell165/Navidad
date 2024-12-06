@@ -1,184 +1,209 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-:root{
-    --fuenteSeccion1:"Outfit", serif;
-    --blanco:rgba(245,245,245);
+
+:root {
+    --fuenteSeccion1: "Outfit", serif;
+    --blanco: rgba(245, 245, 245);
     --azul: #587e9c;
 }
 
-#seccion01{
+#seccion01 {
     background: url(/SRC/IMAGE/HISTORIA/SECCION01H/animalitos-mobil.png);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 1150px;
     padding: 20px;
 
 
 }
 
-#seccion01 h1{
+#seccion01 h1 {
+    text-align: center;
     padding-top: 100px;
     font-family: "Lobster";
-    font-size: 2.5em;
+    font-size: 3em;
     color: var(--azul);
     font-weight: 100;
-    text-align: center;
 
 }
-#seccion01 p{
-    text-align: center;
+
+#seccion01 p {
+    max-width: 600px;
+    font-size: 20px;
     margin-top: 50px;
     font-family: var(--fuenteSeccion1);
     color: var(--azul);
     padding: 0px 25px 25px 25px;
-    font-weight: 250;
-}
-#bolasnavi{
-    width: 300px;
-}
-
-#animalitos{
-    bottom: 0;
-    width: 200%;
-}
-#reno{
-    width: 60px;
-    position: absolute;
-    right: 65px;
-    bottom: 158px;
+    font-weight: 400;
+    opacity: 0.8;
+    text-align: center;
 }
 
 
 
 
-/* .bolas{
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-}
-#rojo{
-    background-color: brown;
-    position: absolute;
-    right: 119px;
-    bottom: 224px;
-    box-shadow: 
-    0 0 10px 5px rgba(235, 17, 17, 0.6), 
-    0 0 20px 10px rgba(236, 17, 17, 0.4)
 
+/* MEDIA REQUERY SECCION01 */
+@media (min-width:800px) {
+    #seccion01 {
+        background: url(/SRC/IMAGE/HISTORIA/SECCION01H/family-bg-desktop.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #seccion01 h1 {
+        font-size: 80px;
+    }
+
+    #seccion01 p {
+        font-size: 25px;
+    }
 }
-#rosado{
-    background-color: rgb(182, 93, 170);
-    position: absolute;
-}
-#azul{
-    background-color: rgb(87, 118, 219);
-    position: absolute;
-}
-#amarillo{
-    background-color: rgb(183, 189, 109);
-    position: absolute;
-}
-#verde{
-    background-color: rgb(36, 163, 53);
-    position: absolute;
-} */
+
+/* FIN DE SECCION 01 */
 
 
-#seccion02{
+/* ----------------------- INICIO  DE SECCION 02 ------------------------------ */
+
+#seccion02 {
     color: var(--azul);
     position: relative;
     width: 100%;
     font-family: var(--fuenteSeccion1);
     padding: 20px;
+
 }
-#seccion02 img{
-    width: 100%;
+
+#seccion02 img {
+    max-width: 800px;
     height: 250px;
 }
-#seccion02 h2{
+
+#text-seccion02 h2 {
     text-align: center;
     margin-top: 50px;
-    font-size: 2.5em;
+    font-size: max(1.2em, 50px)
 
 }
-#seccion02 p{
-    margin-top: 15px;
-    color: var(--azul);
-    font-weight: 400;
+#p-1-sec2{
+    margin-top: 25px;
     text-align: center;
-    
-   
+    margin-bottom: 25px;
 }
-
-#seccion02 p:first-of-type{
-    padding: 0px 50px 0px 50px;
-    font-size: 1.5em;
-}
-
-#seccion02 p:last-of-type{
+#p-2-sec2{
+    text-align: center;
+    opacity: 0.9;
     font-weight: 200;
-    margin-top: 50px;
 }
 
-#seccion02 img{
+
+#seccion02 img {
     margin-top: 50px;
     border-radius: 50px;
     width: 100%;
     height: auto;
 }
 
-#gif{
+#gif {
     position: absolute;
     width: 300px;
     left: -20%;
-    animation: correr 20s  linear infinite;
+    animation: correr 20s linear infinite;
 }
 
 @keyframes correr {
-    0%{
+    0% {
         left: -50%
     }
-    100%{
+
+    100% {
         left: 100%;
     }
 }
 
-#seccion03{
+/* MEDIA QUERY SECCION02 */
+
+@media(min-width:1000px) {
+    #seccion02 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 60px 0px 0px;
+    }
+
+    #text-seccion02 {
+        padding: 100px;
+        display: flex;
+        flex-direction: column;
+        width: 50;
+    }
+    #p-1-sec2 {
+        font-size: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    #p-2-sec2 {
+        margin-top: 15px;
+        color: var(--azul);
+        font-weight: 200;
+        font-size: 25px;
+        text-align: center;
+    }
+    #seccion02 img {
+        width: 50%;
+    }
+}
+/* -----------------------FIN  SECCION02------------------------ */
+
+/*----------------  INICIO SECCION 03 --------------------------*/
+#seccion03 {
     width: 100%;
     padding: 25px;
     margin-top: 50px;
 
 }
-#container-seccion03{
+
+#container-seccion03 {
     background-color: #d0e4fd93;
     padding: 25px;
     text-align: center;
     border-radius: 50px;
 }
-#container-seccion03 h2{
+
+#container-seccion03 h2 {
     font-family: "Lobster";
     color: var(--azul);
-    font-weight: 200;margin-top: 40px;
+    font-weight: 200;
+    margin-top: 40px;
     font-size: 2.5em;
 }
-#container-seccion03 h3{
+
+#container-seccion03 h3 {
     font-weight: 400;
     margin-top: 20px;
     font-weight: 500;
     font-size: 2.2em;
 }
-#container-seccion03 p, h3{
+
+#container-seccion03 p,
+h3 {
     font-family: var(--fuenteSeccion1);
     color: var(--azul);
     margin-top: 25px;
     padding: 0px 25px 0px 25px;
 }
 
-.cart{
+.cart {
     width: 100%;
     background-color: rgb(255, 255, 255);
     border-radius: 25px;
@@ -186,42 +211,46 @@
     text-align: start;
 
 }
-.cart img{
-    border-radius:25px 25px 0px 0px ;
+
+.cart img {
+    border-radius: 25px 25px 0px 0px;
     width: 100%;
 }
 
-.cart h3{
- font-size: 1.5em;
+.cart h3 {
+    font-size: 1.5em;
 }
-.cart p{
+
+.cart p {
     font-size: 1.2em;
     font-weight: 400;
 }
-#container-button{
+
+#container-button {
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.cart button{
+
+.cart button {
     margin-top: 20px;
     margin-bottom: 20px;
-    padding: 15px; 
+    padding: 15px;
     border: none;
     cursor: pointer;
     border-radius: 15px;
     background-color: rgb(61, 187, 45);
     transition: transform 0.3s ease;
 }
+
 .cart button:hover {
     transform: scale(0.9);
-    
+
 }
 
-.cart a{
+.cart a {
     color: white;
     font-size: 1.4em;
     cursor: pointer;
     font-family: var(--fuenteSeccion1);
 }
-

@@ -26,11 +26,6 @@ li {
     list-style: none;
 }
 
-p {
-    font-size: 1.2em;
-    justify-content: center;
-}
-
 a {
     text-decoration: none;
     cursor: pointer;
@@ -41,12 +36,14 @@ a {
 #seccion1 {
     padding: 20px;
     height: 100vh;
+    padding-top: 10%;
     width: 100%;
     background: linear-gradient(to bottom, rgb(193, 248, 255), rgb(255, 255, 255));
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 1;
+    text-align: center;
     align-items: center;
     justify-content: center;
     justify-items: center;
@@ -55,31 +52,37 @@ a {
 }
 
 #seccion1 img {
-    width: 90px;
+    width: max(5em,10vw);
     margin-top: -80px;
     opacity: 0.8;
+    transition: transform 0.5s ease;
+}
+#seccion1 img:hover{
+    transform: scale(1.2);
 }
 
 #seccion1 p {
     margin-top: 20px;
-    font-size: min(2.1em,10vw);
+    font-size: max(1.8em,7vw);
     color: rgba(74, 94, 110, 0.945);
     font-family: "Bungee", sans-serif;
 }
 
 #seccion1 h2 {
+    font-size: max(1.5em,4vw);
     margin-top: 15px;
     color: rgba(64, 90, 110, 0.925);
     font-family: var(--fuenteSeccion1);
-    font-size: 1.9em;
 }
 
 #seccion1 h4 {
     margin: 15px;
-    font-size: 1.7em;
+    font-size: max(1.7em,2.5vw)
+
 }
 
 #time {
+    width: auto;
     display: flex;
     justify-content: center;
     margin-top: 50px;
@@ -97,6 +100,7 @@ a {
 #time h4 {
     color: white;
     opacity: 0.95;
+    font-size: max(1.7em,2.5vw);
 }
 
 h4 {
@@ -109,32 +113,45 @@ h4 {
     display: none;
 }
 
+/*--------------- SECCION 02------------------- */
 
 #seccion2 {
     position: relative;
     font-family: var(--fuenteSeccion1);
     font-weight: 250;
     width: 100%;
-    max-width: 900px;
     min-width: 350px;
     margin: 0 auto;
-    padding: 20px;
+    text-align: center;
+    padding-bottom: 10%;
 
 }
-
+#content-seccion02{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
 #arbolnavidadimg {
+    max-width: 1000px;
     object-fit: cover;
     width: 100%;
     height: 100%;
     position: relative;
     z-index: 2;
+    margin-bottom: 50px;
 }
 
 #seccion2 h2 {
     margin-top: 15px;
 
 }
-
+#sub-seccion2{
+    font-size: max(2em, 4vw);
+}
+#parrafo-seccion02{
+    font-size: max(1.5em, 1.5vw);
+}
 #sub-seccion2::after {
     margin-top: 5px;
     content: "";
@@ -152,6 +169,7 @@ h4 {
 
 #tips-arbol-container {
     margin-top: 25px;
+    
 }
 
 .class-tips {
@@ -165,24 +183,40 @@ h4 {
 }
 
 .class-tips h4 {
-    font-size: 1.4em;
+    font-size: max(1.4em,2vw);
     margin-top: 10px;
     font-weight: 500;
 }
 
 .class-tips p {
-    font-weight: 180;
-
+    font-size: max(1.3em,1.3vw);
 }
 
 .class-tips img {
-    width: 100px;
+    width: max(120px,9vw);
     padding: 10px;
     transition: transform 0.8s ease;
 }
 
 .class-tips img:hover {
     transform: scale(1.2);
+}
+/* MEDIA QUERY SECCION 02 */
+@media (min-width: 700px){
+    #title-content-seccion02{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+    }
+    #content-seccion02{
+        padding: 50px;
+    }
+    #tips-arbol-container{
+        display: flex;
+        width: 100%;
+        gap: 20%;
+    }
+
 }
 /* ----------------- FIN SECCION 02 ------------------*/
 
@@ -199,16 +233,19 @@ h4 {
     justify-content: space-evenly;
     position: relative;
     text-align: center;
-    padding: 20px;
+    padding: 40px;
 }
 
 #seccion3 h2 {
+    width: auto;
     color: white;
     font-family: var(--fuenteSeccion1);
     z-index: 2;
+    font-size: max(2em,4vw);
 }
 
 #seccion3 p {
+    font-size: max(1.2em,1.5vw);
     font-family: var(--fuenteSeccion1);
     color: var(--blanco);
     text-align: center;
@@ -216,7 +253,9 @@ h4 {
 }
 
 #seccion3 button {
-    padding: 8px 15px;
+    /* width: max(10em,2vw);
+    height: max(4em,1.5vw); */
+    padding: 15px 20px;
     font-family: var(--fuenteSeccion1);
     font-size: 0.9em;
     border-radius: 15px;
@@ -226,6 +265,7 @@ h4 {
     cursor: pointer;
     z-index: 2;
     transition: color 0.2s ease;
+    font-size: max(1.3em,1.5vw);
 }
 
 #seccion3 button:hover {
