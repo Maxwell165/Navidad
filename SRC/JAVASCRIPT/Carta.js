@@ -7,10 +7,9 @@ const mediaQuery = window.matchMedia('(min-width: 1000px)')
 let Cartas = []
 
 const imagenSrc = () => {
-    mediaQuery.addEventListener("change", (event) => {
         const carta = document.getElementById("img-seccion1")
         const carta2 = document.getElementById("img-seccion02")
-        if (event.matches) {
+        if (mediaQuery.matches) {
             carta.src = "/SRC/IMAGE/CARTANOEL/prueba2.svg"
             carta2.src = "/SRC/IMAGE/CARTANOEL/MENSAJES-desktop.svg"
         }
@@ -19,7 +18,6 @@ const imagenSrc = () => {
             carta2.src = "/SRC/IMAGE/CARTANOEL/ver-carta-prueba.svg"
         }
         
-    })
 }
 
 const AgregarPersona = () => {
@@ -86,9 +84,8 @@ const contadorCaracteres = () => {
 
 }
 
-imagenSrc()
-mediaQuery.addEventListener("change",imagenSrc)
 AgregarPersona()
 MostrarCartas()
 contadorCaracteres()
-
+imagenSrc()
+// mediaQuery.addEventListener("change",imagenSrc)

@@ -7,7 +7,7 @@ let modalpaises = [
     {
         nombre: "Peru",
         imagen: "/SRC/IMAGE/MUNDO/COS-IMG/pe.png", 
-        descripcion: "En Perú, la Navidad se caracteriza por reuniones familiares en la noche del 24 de diciembre, con una cena tradicional que incluye pavo, panetón y chocolate caliente, a pesar del clima veraniego. Un dato curioso es el 'chocolatón', donde comunidades comparten chocolate y panetón con los más necesitados. También destacan ferias como el Santurantikuy en Cusco, donde se venden artesanías y figuras para nacimientos, resaltando la tradición andina en la festividad.",
+        descripcion: "En Perú, la Navidad se caracteriza por reuniones familiares en la noche del 24 de diciembre, con una cena tradicional que incluye pavo, panetón y chocolate caliente, a pesar del clima veraniego. Un dato curioso es el 'chocolatón', donde comunidades comparten chocolate y panetón con los más necesitados.",
     },
     {
         nombre: "Argentina",

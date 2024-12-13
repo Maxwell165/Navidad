@@ -52,8 +52,7 @@ class eventos {
                 this.map.setCenter(marcador.marker.getPosition())
                 this.map.setZoom(4)
                 
-                this.resultado = modalpaises.find((elemento) =>
-                    elemento.nombre.toLowerCase() === marcador.title.toLowerCase());
+                this.resultado = modalpaises.find((elemento) => elemento.nombre.toLowerCase() === marcador.title.toLowerCase());
                     InsertarPaises(this.resultado)
                     InsertarImagen(this.resultado)
                     this.indice = modalpaises.indexOf(this.resultado)
