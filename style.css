@@ -3,6 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+iframe{
+    width: 85px;
+    height: 80px;
+    position:fixed;
+    padding: 5px;
+    z-index: 4;
+    bottom: 0;
+    right: 0;
+}
 
 @font-face {
     font-family: "Aegean";
@@ -34,15 +43,12 @@ a {
 /* SECCION 01 */
 /* ----------------------------------- */
 #seccion1 {
+    height: 850px;
     padding: 20px;
-    height: 100vh;
-    padding-top: 10%;
-    width: 100%;
     background: linear-gradient(to bottom, rgb(193, 248, 255), rgb(255, 255, 255));
     display: flex;
     flex-direction: column;
     position: relative;
-    z-index: 1;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -82,7 +88,6 @@ a {
 }
 
 #time {
-    width: auto;
     display: flex;
     justify-content: center;
     margin-top: 50px;
@@ -91,11 +96,7 @@ a {
     box-shadow: 0px 8px 2px rgba(0, 0, 0, 0.301);
 }
 
-#time::before {
-    content: "";
-    width: 0;
-    height: 0;
-}
+
 
 #time h4 {
     color: white;
@@ -109,9 +110,6 @@ h4 {
 
 }
 
-#container-img-noel-reno img {
-    display: none;
-}
 
 /*--------------- SECCION 02------------------- */
 
@@ -120,10 +118,11 @@ h4 {
     font-family: var(--fuenteSeccion1);
     font-weight: 250;
     width: 100%;
+    height: auto;
     min-width: 350px;
     margin: 0 auto;
     text-align: center;
-    padding-bottom: 10%;
+    padding-bottom: 50px;
 
 }
 #content-seccion02{
@@ -134,11 +133,9 @@ h4 {
 }
 #arbolnavidadimg {
     max-width: 1000px;
-    object-fit: cover;
     width: 100%;
     height: 100%;
     position: relative;
-    z-index: 2;
     margin-bottom: 50px;
 }
 
@@ -193,7 +190,7 @@ h4 {
 }
 
 .class-tips img {
-    width: max(120px,9vw);
+    width: max(100px,11vw);
     padding: 10px;
     transition: transform 0.8s ease;
 }
@@ -204,7 +201,7 @@ h4 {
 /* MEDIA QUERY SECCION 02 */
 @media (min-width: 700px){
     #title-content-seccion02{
-        width: 70%;
+        max-width: 90%;
         display: flex;
         flex-direction: column;
     }
@@ -226,7 +223,9 @@ h4 {
     background-image: url(/SRC/IMAGE/SECCION03/gorros-navidad.jpg);
     background-position: center;
     background-size: cover;
-    height: 50vh;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -245,7 +244,7 @@ h4 {
 }
 
 #seccion3 p {
-    font-size: max(1.2em,1.5vw);
+    font-size: max(1em,1.5vw);
     font-family: var(--fuenteSeccion1);
     color: var(--blanco);
     text-align: center;
@@ -266,6 +265,7 @@ h4 {
     z-index: 2;
     transition: color 0.2s ease;
     font-size: max(1.3em,1.5vw);
+    margin-top: 25px;
 }
 
 #seccion3 button:hover {

@@ -1,3 +1,5 @@
+const mediaQuery = window.matchMedia('(min-width: 1000px)')
+const sonido = new Audio('/SRC/IMAGE/BMUSIC/sound-click.mp3')
 
 class Marcador {
     constructor(title, lat, lng, url, map) {
@@ -45,6 +47,7 @@ class eventos {
     enfocarMarcador() {
         console.log(this.marcadorenfocado)
         this.marcadores.forEach((marcador) => {
+            
             google.maps.event.addListener(marcador.marker, "click", () => {
                 this.map.setCenter(marcador.marker.getPosition())
                 this.map.setZoom(4)
@@ -55,8 +58,6 @@ class eventos {
                     InsertarImagen(this.resultado)
                     this.indice = modalpaises.indexOf(this.resultado)
                     this.marcadorenfocado = true
-                console.log(this.resultado)
-                console.log(this.indice)
             })
         })
 
@@ -105,8 +106,14 @@ class eventos {
 const zoomCompleto = (map) => {
     const planeta = document.getElementById("planeta")
     planeta.addEventListener("click", () => {
+        sonido.play()
+        sonido.volume = 0.1
         map.setCenter({ lat: 15, lng: 15 })
-        map.setZoom(1)
+        if(mediaQuery.matches){
+            map.setZoom(2)
+        }else{
+            map.setZoom(0.5)
+        }
         const contenedorPaises = document.getElementById("paises")
         contenedorPaises.innerHTML = ""
     })
@@ -116,10 +123,11 @@ const zoomCompleto = (map) => {
 
 // FUNCION PARA CREAR MAPA PERSONALIZADO , CONSTANTES PARA LOS MARCADORES Y INICIAR INSTANCIAS Y FUNCIONES
 function initMap() {
+    const zoom = mediaQuery.matches ? 2 : 0.5
     const map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 15, lng: 15 },  // Coordenadas del centro del mapa
         mapId: '4f4beacbe7b0addc',
-        zoom: 1,
+        zoom : zoom,
         disableDefaultUI: true,  // Desactivar todos los controles predeterminados
         draggable: false,  // Desactivar la capacidad de arrastrar el mapa
         scrollwheel: false,  // Desactivar el zoom con la rueda del ratón

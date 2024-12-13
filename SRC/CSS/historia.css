@@ -3,6 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+iframe{
+    width: 85px;
+    height: 80px;
+    position:fixed;
+    padding: 5px;
+    z-index: 4;
+    bottom: 0;
+    right: 0;
+}
 
 :root {
     --fuenteSeccion1: "Outfit", serif;
@@ -82,23 +91,20 @@
 
 }
 
-#seccion02 img {
-    max-width: 800px;
-    height: 250px;
-}
 
 #text-seccion02 h2 {
     text-align: center;
     margin-top: 50px;
-    font-size: max(1.2em, 50px)
-
+    font-size: clamp(2rem, 5vw, 50px)
 }
-#p-1-sec2{
+
+#p-1-sec2 {
     margin-top: 25px;
     text-align: center;
     margin-bottom: 25px;
 }
-#p-2-sec2{
+
+#p-2-sec2 {
     text-align: center;
     opacity: 0.9;
     font-weight: 200;
@@ -143,26 +149,29 @@
         padding: 100px;
         display: flex;
         flex-direction: column;
-        width: 50;
     }
+
     #p-1-sec2 {
-        font-size: 30px;
-        margin-top: 10px;
+        font-size: 22px;
+        margin-top: 15px;
         margin-bottom: 10px;
         text-align: center;
     }
-    
+
     #p-2-sec2 {
         margin-top: 15px;
         color: var(--azul);
         font-weight: 200;
-        font-size: 25px;
+        font-size: 20px;
         text-align: center;
     }
+
     #seccion02 img {
-        width: 50%;
+        max-width: 800px;
+        width: 45%;
     }
 }
+
 /* -----------------------FIN  SECCION02------------------------ */
 
 /*----------------  INICIO SECCION 03 --------------------------*/
@@ -186,6 +195,7 @@
     font-weight: 200;
     margin-top: 40px;
     font-size: 2.5em;
+    margin-bottom: 50px;
 }
 
 #container-seccion03 h3 {
@@ -203,8 +213,11 @@ h3 {
     padding: 0px 25px 0px 25px;
 }
 
+#container-seccion03 h2 {
+    font-size: clamp(3em, 8vw, 80px);
+}
+
 .cart {
-    width: 100%;
     background-color: rgb(255, 255, 255);
     border-radius: 25px;
     margin-top: 45px;
@@ -227,9 +240,12 @@ h3 {
 }
 
 #container-button {
-    width: 100%;
+    width: auto;
+    height: auto;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end
 }
 
 .cart button {
@@ -254,3 +270,42 @@ h3 {
     cursor: pointer;
     font-family: var(--fuenteSeccion1);
 }
+
+/* MEDIA QUERY DE SECCION03 */
+ @media(min-width:1000px) {
+    #container-cartas {
+        display: flex;
+        justify-content: space-between;
+        width:100%;
+        flex-wrap: wrap;
+    }
+    #container-button{
+        height: 100%;
+    }
+    #container-carta-3 .cart h3{
+        height: 88px;
+
+    }
+    .cart{
+        display: flex;
+        flex-direction: column;
+        transition: box-shadow 0.5s ease;
+    }
+    .cart:hover{
+        box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.342);
+    }
+    #container-cartas .container-carta{
+       width: 350px;
+    }
+    #container-cartas .container-carta .text-carta{
+        height: 280px;
+    }
+    #container-cartas .container-carta .cart{
+        height: 625px;
+    }
+ }
+
+
+
+
+/* FIN DE SECCION03 */

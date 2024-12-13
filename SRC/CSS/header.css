@@ -108,15 +108,16 @@ nav button img{
     flex-direction: column;
     gap: 35px;
     margin-left: 30px;
+    height: 100%
 }
 #lista-navegacion li{
-    display: flex;
+    display: flex; 
     justify-items: center;
     align-items: center;  
 }
 
 #lista-navegacion li:last-child{
-    margin-top: 120px;
+    margin-top: 50px;
     font-size: 2em;
     color: rgba(0, 0, 0, 0.877);
 }

@@ -3,9 +3,24 @@ const nombremensaje = document.getElementById("nombre-mensaje")
 const izquierda = document.getElementById("flecha-izquierda")
 const derecha = document.getElementById("flecha-derecha")
 const text = document.getElementById("caracteres")
+const mediaQuery = window.matchMedia('(min-width: 1000px)')
 let Cartas = []
 
-
+const imagenSrc = () => {
+    mediaQuery.addEventListener("change", (event) => {
+        const carta = document.getElementById("img-seccion1")
+        const carta2 = document.getElementById("img-seccion02")
+        if (event.matches) {
+            carta.src = "/SRC/IMAGE/CARTANOEL/prueba2.svg"
+            carta2.src = "/SRC/IMAGE/CARTANOEL/MENSAJES-desktop.svg"
+        }
+        else {
+            carta.src = "/SRC/IMAGE/CARTANOEL/carta-mobile.svg"
+            carta2.src = "/SRC/IMAGE/CARTANOEL/ver-carta-prueba.svg"
+        }
+        
+    })
+}
 
 const AgregarPersona = () => {
     const enviar = document.getElementById("enviar-carta")
@@ -15,7 +30,6 @@ const AgregarPersona = () => {
         const email = document.getElementById("Email-input").value
         const mensaje = document.getElementById("text-carta").value
         Cartas.push({ nombre, email, mensaje })
-        guardasCarta(nombre, mensaje, email)
         document.getElementById("Nombre-input").value = "";
         document.getElementById("Email-input").value = "";
         document.getElementById("text-carta").value = "";
@@ -50,29 +64,31 @@ const MostrarCartas = () => {
         }
         mostrarmensaje.innerText = Cartas[indice].mensaje
         nombremensaje.innerText = Cartas[indice].nombre
-        
+
 
     })
 
 }
-const contadorCaracteres = ()=>{
-    
-    
+const contadorCaracteres = () => {
+
+
     let Numcaracteres = document.getElementById("text-carta")
 
-    Numcaracteres.addEventListener("input",()=>{
-        if(Numcaracteres.value.length > 180){
-            Numcaracteres.value = Numcaracteres.value.slice(0,180)
+    Numcaracteres.addEventListener("input", () => {
+        if (Numcaracteres.value.length > 180) {
+            Numcaracteres.value = Numcaracteres.value.slice(0, 180)
         }
         let caracteres = Numcaracteres.value.length
         text.innerText = `${caracteres}/180`
-        
+
     })
 
 
 }
 
-
+imagenSrc()
+mediaQuery.addEventListener("change",imagenSrc)
 AgregarPersona()
 MostrarCartas()
 contadorCaracteres()
+

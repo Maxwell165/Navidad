@@ -1,30 +1,47 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-@font-face{
+iframe{
+    width: 85px;
+    height: 80px;
+    position:fixed;
+    padding: 5px;
+    z-index: 4;
+    bottom: 0;
+    right: 0;
+}
+body{
+    background: linear-gradient(to right, #ff2313 60%, #ff1100);
+}
+@font-face {
     font-family: "Aegean";
     src: url("/font/Aegean.ttf") format("truetype");
     font-style: normal;
 }
+
 @font-face {
     font-family: "Aegean2";
     src: url("/font/AegeanHinted.ttf") format("truetype");
     font-style: normal;
 }
+
 @font-face {
     font-family: "Railey";
     src: url("/font/Railey-PersonalUse.ttf") format("truetype");
     font-style: normal;
 }
-input,button{
+
+input,
+button {
     border: none;
     outline: none;
     font-family: "Aegean";
 }
-#seccion1{
-    background:linear-gradient(to bottom, #b4e6de, #ffffffd8);
+
+#seccion1 {
+    
     height: auto;
     width: 100%;
     text-align: center;
@@ -35,16 +52,17 @@ input,button{
 
 }
 
-#title-seccion1{
+#title-seccion1 {
     font-family: "Lobster";
     font-size: 3.5em;
-    color: rgba(63, 122, 161, 0.918);
+    color: rgb(255, 255, 255);
     padding-top: 100px;
 
 }
-#text-seccion1{
+
+#text-seccion1 {
     font-family: "Outfit", serif;
-    color: rgb(62, 131, 127);
+    color: rgb(255, 255, 255);
     font-size: 1.1em;
     padding: 0px 25px 0px 25px;
     text-align: center;
@@ -52,36 +70,40 @@ input,button{
     margin-top: 30px;
 }
 
-#img-seccion1{
+#img-seccion1 {
     width: 100%;
     height: auto;
     margin-top: 30px;
-}
-#carta{
-    position: relative; 
-    width: 100%; 
-    max-width: 450px; 
-    min-width: 300px;
-    margin: 0 auto;
+    max-width: 500px;
 }
 
-#container-input{
-    position: absolute;
-    top: 58%; 
+#carta {
+    position: relative;
     width: 100%;
-    padding: 15px; 
-    height: auto; 
-    display: flex; 
+    max-width: 450px;
+    margin: 0 auto;
+    
+}
+
+
+#container-input {
+    position: absolute;
+    top: 58%;
+    width: 100%;
+    padding: 15px;
+    display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Arial', sans-serif;
 }
-#container-input h2{
+
+#container-input h2 {
     font-size: 1.3em;
     color: rgb(25, 107, 32);
     font-family: "Yomogi", cursive;
 }
-#container-input p{
+
+#container-input p {
     font-size: 1em;
     color: rgb(25, 107, 32);
     font-weight: 800;
@@ -90,9 +112,7 @@ input,button{
 
 
 
-
-
-#container-name{
+#container-name {
     width: 90%;
     display: flex;
     align-items: center;
@@ -102,119 +122,137 @@ input,button{
     margin-bottom: 15px;
 
 }
-#container-name input{
+
+#container-name input {
     width: 120px;
     height: 30px;
     border-radius: 5px;
     padding: 5px;
     font-size: 1.1em;
-    
+
 }
 
-#carta-text{
+#carta-text {
     display: flex;
     flex-direction: column;
     width: 90%;
     height: auto;
     align-items: flex-end;
 }
-#text-carta{
+
+#text-carta {
     border: none;
     outline: none;
     resize: none;
     font-family: "Aegean2";
     background-color: #e6e6e6c5;
-    width: 200px;   
+    width: 200px;
     height: 140px;
     border-radius: 5px;
     font-size: 1.1em;
     padding: 5px;
 }
 
-#carta-text button{
+#carta-text button {
     width: 100px;
-    padding: 10px;
+    padding: 6px;
     border-radius: 5px;
-    background-color: #ff0000;
     color: white;
+    background-color: #d11717;
     font-size: 1.2em;
     margin-top: 10px;
     cursor: pointer;
-    transition: transform 0.1s linear , background-color 0.2s linear;
+    transition: transform 0.1s linear, background-color 0.2s linear;
 }
 
-#carta-text button:hover{
+#carta-text button:hover {
     background-color: rgb(23, 100, 27);
 }
-#carta-text button:active{
-    transform: scale(0.95) ;
+
+#carta-text button:active {
+    transform: scale(0.95);
 }
 
-#seccion02-carta{
-    background:linear-gradient(to bottom, #d11717, #e71313d8);
+/*-------------------- INICIO DE SECCION 02 DE LA CARTA --------------------- */
+
+#seccion02-carta {
+    background: linear-gradient(to bottom, #d11717, #e71313d8);
+    background-image: url('/SRC/IMAGE/CARTANOEL/seccion2prueba.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
     width: 100%;
-    height: 100vh;
+    height: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
 }
-#container-seccion02{
-    position: relative; 
+
+#container-seccion02 {
+    position: relative;
     width: 100%;
-    height: 100%;;
-    max-width: 450px; 
+    height: 100%;
+    max-width: 500px;
     min-width: 300px;
     margin: 0 auto;
 }
 
 
-#img-seccion02{
+#img-seccion02 {
     display: block;
+    max-width: 400px;
     width: 100%;
-    height: 100%;
+    height: auto;
+    margin: 0 auto;
 }
-#container-mensajes{
+#container-mensajes {
     display: flex;
     justify-items: center;
     align-items: center;
     align-content: center;
     position: absolute;
-    top: 13%;
+    top: 0%;
     width: 100%;
     height: auto;
     flex-direction: column;
 
 }
-#container-mensajes h2{
+
+#container-mensajes h2 {
     padding-bottom: 30px;
     font-family: "Railey";
     color: white;
-    font-size: 5em;
+    font-size: 6em;
     font-weight: 500;
 }
-#container-mensaje-flechas{
+
+#container-mensaje-flechas {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
     height: 200px;
     padding: 5px;
-    
 }
-#container-mensaje-flechas img{
+
+#container-mensaje-flechas img {
     opacity: 50%;
     cursor: pointer;
     transition: transform 0.05s linear;
 }
-#container-mensaje-flechas img:active{
+
+#container-mensaje-flechas img:active {
     transform: scale(0.9);
 }
-#container-mensaje-flechas img:hover{
+
+#container-mensaje-flechas img:hover {
     opacity: 80%;
 }
 
 
-#container-mensaje{
+#container-mensaje {
     display: flex;
     flex-direction: column;
     height: auto;
@@ -223,15 +261,102 @@ input,button{
 
 }
 
-#nombre-mensaje{
+#nombre-mensaje {
     margin-top: 10px;
     font-family: "Aegean";
     color: rgba(255, 192, 96, 0.945);
 }
-#mostrar-mensaje{
+
+#mostrar-mensaje {
     font-family: "Aegean";
     overflow: hidden;
     color: white;
     font-size: 1.3em;
 
 }
+/* -----------------MEDIA QUEARY----------------- */
+@media (min-width:1000px) {
+    #seccion1{
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    #text-seccion1{
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 0px 160px 0px 160px;
+    }
+    #title-seccion1{
+        font-size: 8em;
+    }
+    #carta{
+        width: auto;
+        max-width: 100%;
+
+    }
+
+    #container-input {
+        display: inline-block;
+        width: auto;
+        max-width:900px;
+        top: 40%;
+        left: 50%;
+    }
+    #container-name{
+        gap: 50px;
+    }
+    #carta-text{
+        text-align: end;
+        width: 100%;
+    }
+    #container-input h2{
+        font-size: 3vw;
+    }
+    #container-name p{
+        font-size: 2vw;
+    }
+    #text-carta{
+        width: 290px;
+        font-size: 1.2rem;
+    }
+    #img-seccion1{
+       max-width: 100%;
+    }
+    #carta-text button{
+        padding: 8px;
+    }
+    /* SECCION 02  */
+
+    #seccion02-carta{
+        background: none;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+    }
+    #container-seccion02{
+        max-width: 100%;
+    }
+    #img-seccion02{
+        max-width: 100%;
+        
+    }
+    #container-mensajes{
+        width: 60%;
+        right: 5%;
+        top: 10%;
+    }
+    #container-mensajes h2{
+        font-size: 8em;
+    }
+    #mostrar-mensaje{
+        font-size: 2.5vw;
+    }
+    #nombre-mensaje{
+        font-size: 1.5rem;
+
+
+    }
+    
+}
+
+
